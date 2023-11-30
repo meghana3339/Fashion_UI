@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>UserId</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>RoleId</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let User of User">
+                <td>{{User.UserId}}</td>
+                <td>{{User.UserName}}</td>
+                <td>{{User.Email}}</td>
+                <td>{{User.Password}}</td>
+                <td>{{User.RoleId}}</td>
+                <td>
+                    <button class="btn btn-info" (click)="getId(User.UserId)">Edit</button> &nbsp;
+                    <button class="btn btn-primary" (click)="delete(User.UserId)">Delete</button> &nbsp;
+                    <button class="btn btn-secondary" (click)="getId(User.UserId)">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,61 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tr>
+            <td>
+                <label>UserId</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="UserId" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isuserExist">
+        <tr>
+            <td>UserId</td>
+            <td>
+                <input type="number" [(ngModel)]="User.UserId" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>UserName</td>
+            <td>
+                <input type="text" [(ngModel)]="User.UserName" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text" [(ngModel)]="User.Email" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="text" [(ngModel)]="User.Password" class="form-control">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>RoleId</td>
+            <td>
+                <input type="number" [(ngModel)]="User.RoleId" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="edit()">Edit</button> &nbsp;
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

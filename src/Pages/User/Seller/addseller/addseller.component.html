@@ -1,0 +1,41 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>SellerId</td>
+            <td>
+                <input type="number" [(ngModel)]="Seller.SellerId">
+            </td>
+        </tr>
+        <tr>
+            <td>SellerName</td>
+            <td>
+                <input type="text" [(ngModel)]="Seller.SellerName">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text" [(ngModel)]="Seller.Email">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="number" [(ngModel)]="Seller.Password">
+            </td>
+        </tr>
+        <tr>
+            <td>RoleId</td>
+            <td>
+                <input type="number" [(ngModel)]="User.RoleId">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addSeller()">Add</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
