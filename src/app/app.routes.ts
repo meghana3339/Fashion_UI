@@ -8,6 +8,9 @@ import { AddsellerComponent } from '../Pages/User/Seller/addseller/addseller.com
 import { AddproductComponent } from '../Pages/User/product/addproduct/addproduct.component';
 import { GetallproductsComponent } from '../Pages/User/product/getallproducts/getallproducts.component';
 import { ProductbyidComponent } from '../Pages/User/product/productbyid/productbyid.component';
+import { AddbrandComponent } from '../Pages/brand/addbrand/addbrand.component';
+import { GetallbrandsComponent } from '../Pages/brand/getallbrands/getallbrands.component';
+import { BrandbyidComponent } from '../Pages/brand/brandbyid/brandbyid.component';
 
 export const routes: Routes = [
     {path:'adduser',component:AdduserComponent},
@@ -19,5 +22,8 @@ export const routes: Routes = [
     {path:'addproduct',component:AddproductComponent},
     {path:'getallproducts',component:GetallproductsComponent},
     {path:'productbyid',component:ProductbyidComponent},
+    {path:'addbrand',component:AddbrandComponent},
+    {path:'getallbrands',component:GetallbrandsComponent},
+    {path:'brandbyid',component:BrandbyidComponent},
 
 ];
