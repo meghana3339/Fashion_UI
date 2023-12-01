@@ -3,12 +3,13 @@ import { Seller } from '../../../../Models/seller';
 import { Router,ActivatedRoute } from '@angular/router';
 import { HttpClient ,HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-sellerbyid',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],
+  imports: [CommonModule,FormsModule,HttpClientModule],
   templateUrl: './sellerbyid.component.html',
   styleUrl: './sellerbyid.component.css'
 })

@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { Seller } from '../../../../Models/seller';
-import { CommonModule } from '@angular/common';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-gellallsellers',
+  selector: 'app-getallsellers',
   standalone: true,
   imports: [CommonModule,HttpClientModule],
-  templateUrl: './gellallsellers.component.html',
-  styleUrl: './gellallsellers.component.css'
+  templateUrl: './getallsellers.component.html',
+  styleUrl: './getallsellers.component.css'
 })
-export class GellallsellersComponent {
+export class GetallsellersComponent {
   seller: Seller[] = [];
   constructor(private http: HttpClient, private router: Router) {
     this.getAllsellers();
@@ -39,6 +39,3 @@ export class GellallsellersComponent {
   }
 
 }
-
-
-

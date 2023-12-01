@@ -1,0 +1,23 @@
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ProductID</th>
+                <th>ProductName</th>
+                <th>Price</th>
+                 <th>Brand</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of products">
+                <td>{{item.ProductId}}</td>
+                <td>{{item.ProductName}}</td>
+                <td>{{item.Price}}</td>
+                <td>{{item.Brand}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+

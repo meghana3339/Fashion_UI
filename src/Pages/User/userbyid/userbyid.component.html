@@ -5,7 +5,7 @@
                 <label>UserId</label>
             </td>
             <td>
-                <input type="number" [(ngModel)]="UserId" class="form-control">
+                <input type="number" [(ngModel)]="userId" class="form-control">
             </td>
             <td>
                 <button class="btn btn-primary" (click)="search()">Search</button>
@@ -22,32 +22,31 @@
         <tr>
             <td>UserId</td>
             <td>
-                <input type="number" [(ngModel)]="User.UserId" readonly class="form-control">
+                <input type="number" [(ngModel)]="user.UserId" readonly class="form-control">
             </td>
         </tr>
         <tr>
             <td>UserName</td>
             <td>
-                <input type="text" [(ngModel)]="User.UserName" readonly class="form-control">
+                <input type="text" [(ngModel)]="user.UserName" readonly class="form-control">
             </td>
         </tr>
         <tr>
             <td>Email</td>
             <td>
-                <input type="text" [(ngModel)]="User.Email" class="form-control">
+                <input type="text" [(ngModel)]="user.Email" class="form-control">
             </td>
         </tr>
         <tr>
             <td>Password</td>
             <td>
-                <input type="text" [(ngModel)]="User.Password" class="form-control">
-                </select>
+                <input type="text" [(ngModel)]="user.Password" class="form-control">
             </td>
         </tr>
         <tr>
             <td>RoleId</td>
             <td>
-                <input type="number" [(ngModel)]="User.RoleId" class="form-control">
+                <input type="number" [(ngModel)]="user.RoleId" class="form-control">
             </td>
         </tr>
         <tr>

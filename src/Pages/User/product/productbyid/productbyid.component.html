@@ -1,11 +1,12 @@
 <div class="container">
     <table class="table" style="width: 500px;">
+        <tbody>
         <tr>
             <td>
-                <label>SellerId</label>
+                <label>ProductId</label>
             </td>
             <td>
-                <input type="number" [(ngModel)]="sellerId" class="form-control">
+                <input type="number" [(ngModel)]="productId" class="form-control">
             </td>
             <td>
                 <button class="btn btn-primary" (click)="search()">Search</button>
@@ -16,37 +17,33 @@
                 <span style="color: red;">{{errMsg}}</span>
             </td>
         </tr>
+    </tbody>
     </table>
     <hr>
-    <table class="table" *ngIf="issellerExist">
+    <table class="table" *ngIf="isProductExist">
+        <tbody>
         <tr>
-            <td>SellerId</td>
+            <td>ProductId</td>
             <td>
-                <input type="number" [(ngModel)]="seller.SellerId" readonly class="form-control">
+                <input type="number" [(ngModel)]="product.ProductId" readonly class="form-control">
             </td>
         </tr>
         <tr>
-            <td>SellerName</td>
+            <td>ProductName</td>
             <td>
-                <input type="text" [(ngModel)]="seller.SellerName" readonly class="form-control">
+                <input type="text" [(ngModel)]="product.ProductName"  class="form-control">
             </td>
         </tr>
         <tr>
-            <td>Email</td>
+            <td>Price</td>
             <td>
-                <input type="text" [(ngModel)]="seller.Email" class="form-control">
+                <input type="number" [(ngModel)]="product.Price" class="form-control">
             </td>
         </tr>
         <tr>
-            <td>Mobilenum</td>
+            <td>Brand</td>
             <td>
-                <input type="number" [(ngModel)]="seller.MobileNum" class="form-control">
-            </td>
-        </tr>
-        <tr>
-            <td>RoleId</td>
-            <td>
-                <input type="number" [(ngModel)]="seller.RoleId" class="form-control">
+                <input type="text" [(ngModel)]="product.Brand" class="form-control">
             </td>
         </tr>
         <tr>
@@ -55,7 +52,7 @@
                 <button class="btn btn-primary" (click)="delete()">Delete</button>
             </td>
         </tr>
-
+    </tbody>
     </table>
 </div>
 

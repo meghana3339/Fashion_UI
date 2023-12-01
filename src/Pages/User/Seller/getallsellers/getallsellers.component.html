@@ -1,0 +1,29 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>SellerId</th>
+                <th>SellerName</th>
+                <th>Email</th>
+                <th>MobileNum</th>
+                <th>RoleId</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Seller of seller">
+                <td>{{Seller.SellerId}}</td>
+                <td>{{Seller.SellerName}}</td>
+                <td>{{Seller.Email}}</td>
+                <td>{{Seller.MobileNum}}</td>
+                <td>{{Seller.RoleId}}</td>
+                <td>
+                    <button class="btn btn-info" (click)="getId(Seller.SellerId)">Edit</button> &nbsp;
+                    <button class="btn btn-primary" (click)="delete(Seller.SellerId)">Delete</button> &nbsp;
+                    <button class="btn btn-secondary" (click)="getId(Seller.SellerId)">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

@@ -3,11 +3,12 @@ import { User } from '../../../Models/user';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { Router,ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-userbyid',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],
+  imports: [CommonModule,FormsModule,HttpClientModule],
   templateUrl: './userbyid.component.html',
   styleUrl: './userbyid.component.css'
 })
