@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-getall-users',
+  selector: 'app-getallusers',
   standalone: true,
   imports: [CommonModule,HttpClientModule],
-  templateUrl: './getall-users.component.html',
-  styleUrl: './getall-users.component.css'
+  templateUrl: './getallusers.component.html',
+  styleUrl: './getallusers.component.css'
 })
 export class GetallUsersComponent {
   user: User[] = [];

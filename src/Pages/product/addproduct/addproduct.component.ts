@@ -1,29 +1,29 @@
 import { Component } from '@angular/core';
+import { Product } from '../../../Models/product';
 import { CommonModule } from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import { Seller } from '../../../../Models/seller';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-addseller',
+  selector: 'app-addproduct',
   standalone: true,
   imports: [CommonModule,FormsModule,HttpClientModule],
-  templateUrl: './addseller.component.html',
-  styleUrl: './addseller.component.css'
+  templateUrl: './addproduct.component.html',
+  styleUrl: './addproduct.component.css'
 })
-export class AddsellerComponent {
-  seller: Seller;
+export class AddproductComponent {
+  products: Product;
   constructor(private http: HttpClient, private router: Router) {
-    this.seller = new Seller();
+    this.products = new Product();
   }
-  addSeller() {
+  addProduct() {
     this.http
-      .post('http://localhost:64257/api/Movie/AddMovie', this.seller)
+      .post('http://localhost:5140/api/Product/AddProducts', this.products)
       .subscribe((response) => {
         console.log(response);
       });
-    this.router.navigateByUrl('getall'); 
-  }
+    this.router.navigateByUrl('get'); 
+  }
 
 }

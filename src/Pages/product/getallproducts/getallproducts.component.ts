@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Product } from '../../../../Models/product';
 import { FormsModule } from '@angular/forms';
+import { Product } from '../../../Models/product';
 
 @Component({
   selector: 'app-getallproducts',
@@ -29,3 +29,4 @@ export class GetallproductsComponent {
 
     }
   }
+
