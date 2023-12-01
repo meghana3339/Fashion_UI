@@ -54,7 +54,7 @@ export class UserbyidComponent {
     this.roter.navigateByUrl('getall');
   }
   delete() {
-    this.userId = this.user.UserId;
+    this.userId = this.user.userId;
     this.http
       .delete('http://localhost:64257/api/Movie/DeleteMovie/' + this.userId)
       .subscribe((response) => {

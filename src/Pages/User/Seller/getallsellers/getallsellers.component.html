@@ -2,25 +2,25 @@
     <table class="table table-bordered table-responsive">
         <thead>
             <tr>
-                <th>SellerId</th>
-                <th>SellerName</th>
-                <th>Email</th>
-                <th>MobileNum</th>
-                <th>RoleId</th>
+                <th>sellerId</th>
+                <th>sellerName</th>
+                <th>email</th>
+                <th>mobileNum</th>
+                <th>roleId</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let Seller of seller">
-                <td>{{Seller.SellerId}}</td>
-                <td>{{Seller.SellerName}}</td>
-                <td>{{Seller.Email}}</td>
-                <td>{{Seller.MobileNum}}</td>
-                <td>{{Seller.RoleId}}</td>
+                <td>{{Seller.sellerId}}</td>
+                <td>{{Seller.sellerName}}</td>
+                <td>{{Seller.email}}</td>
+                <td>{{Seller.mobileNum}}</td>
+                <td>{{Seller.roleId}}</td>
                 <td>
-                    <button class="btn btn-info" (click)="getId(Seller.SellerId)">Edit</button> &nbsp;
-                    <button class="btn btn-primary" (click)="delete(Seller.SellerId)">Delete</button> &nbsp;
-                    <button class="btn btn-secondary" (click)="getId(Seller.SellerId)">View</button>
+                    <button class="btn btn-info" (click)="getId(Seller.sellerId)">Edit</button> &nbsp;
+                    <button class="btn btn-primary" (click)="delete(Seller.sellerId)">Delete</button> &nbsp;
+                    <button class="btn btn-secondary" (click)="getId(Seller.sellerId)">View</button>
                 </td>
             </tr>
         </tbody>

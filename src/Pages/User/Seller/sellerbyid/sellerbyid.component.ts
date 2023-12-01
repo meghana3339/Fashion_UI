@@ -55,7 +55,7 @@ export class SellerbyidComponent {
     this.roter.navigateByUrl('getall');
   }
   delete() {
-    this.sellerId = this.seller.SellerId;
+    this.sellerId = this.seller.sellerId;
     this.http
       .delete('http://localhost:64257/api/Movie/DeleteMovie/' + this.sellerId)
       .subscribe((response) => {

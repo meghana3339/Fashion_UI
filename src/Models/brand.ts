@@ -1,5 +1,5 @@
 export class Brand {
-    public BrandId?: number;
-    public BrandName?: string;
-    public Description?: string;
+    public brandId?: number;
+    public brandName?: string;
+    public description?: string;
 }

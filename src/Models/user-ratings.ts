@@ -1,7 +1,7 @@
 export class UserRatings {
-    public UserRatingsId?: number;
-    public Ratings?:number;
-    public RatedAt?:number;
-    public ProductId?: number;
-    public  UserId?: number;
+    public userRatingsId?: number;
+    public ratings?:number;
+    public ratedAt?:number;
+    public productId?: number;
+    public  userId?: number;
 }

@@ -1,5 +1,5 @@
 export class Notification {
-    public NotificationId?: number;
-    public Notification?:string;
-    public NotificationTime?:number;
+    public notificationId?: number;
+    public notification?:string;
+    public notificationTime?:number;
 }

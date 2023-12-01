@@ -1,7 +1,7 @@
 export class Seller {
-    public SellerId?: number;
-    public SellerName?: string;
-    public Email?: string;
-    public MobileNum?: number;
-    public RoleId?: number;
+    public sellerId?: number;
+    public sellerName?: string;
+    public email?: string;
+    public mobileNum?: number;
+    public roleId?: number;
 }

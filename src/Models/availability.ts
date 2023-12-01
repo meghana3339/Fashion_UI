@@ -1,5 +1,5 @@
 export class Availability {
-    public AvialabilityId?: number;
-    public Quantity?: number;
+    public avialabilityId?: number;
+    public quantity?: number;
     public product?:string;
 }

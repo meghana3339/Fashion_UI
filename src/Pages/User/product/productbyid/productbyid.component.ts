@@ -55,7 +55,7 @@ edit() {
   this.roter.navigateByUrl('get');
 }
 delete() {
-  this.productId = this.product.ProductId;
+  this.productId = this.product.productId;
   this.http
     .delete('http://localhost:5140/api/Product/DeleteProduct/' + this.productId)
     .subscribe((response) => {
