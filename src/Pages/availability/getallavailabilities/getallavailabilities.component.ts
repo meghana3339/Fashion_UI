@@ -19,7 +19,7 @@ export class GetallavailabilitiesComponent {
   }
   getAllavailabilities() {
     this.http
-      .get<Availability[]>('http://localhost:64257/api/Movie/GetAllMovies')
+      .get<Availability[]>('http://localhost:5254/api/Availaility/GetAllAvailabilities')
       .subscribe((response) => {
         this.availability = response;
         console.log(this.availability);
