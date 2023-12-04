@@ -18,24 +18,11 @@ export class GetallUsersComponent {
   }
   getAllusers() {
     this.http
-      .get<User[]>('http://localhost:64257/api/Movie/GetAllMovies')
+      .get<User[]>('http://localhost:5254/api/User/GetAllUsers')
       .subscribe((response) => {
         this.user = response;
         console.log(this.user);
       });
   }
-  delete(id: any) {
-    console.log(id);
-    this.http
-      .delete('http://localhost:64257/api/Movie/DeleteMovie/' + id)
-      .subscribe((response) => {
-        console.log(response);
-      });
-    this.getAllusers(); 
-    location.reload(); 
-  }
-  getId(id: any) {
-    this.router.navigateByUrl('search/' + id);
-  }
-
+ 
 }

@@ -3,25 +3,23 @@
         <thead>
             <tr>
                 <th>userId</th>
-                <th>userName</th>
+                <th>name</th>
                 <th>email</th>
                 <th>password</th>
-                <th>roleId</th>
-                <th></th>
+                <th>mobile</th>
+                <th>roleName</th>
+                
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let User of user">
                 <td>{{User.userId}}</td>
-                <td>{{User.userName}}</td>
+                <td>{{User.name}}</td>
                 <td>{{User.email}}</td>
                 <td>{{User.password}}</td>
-                <td>{{User.roleId}}</td>
-                <td>
-                    <button class="btn btn-info" (click)="getId(User.userId)">Edit</button> &nbsp;
-                    <button class="btn btn-primary" (click)="delete(User.userId)">Delete</button> &nbsp;
-                    <button class="btn btn-secondary" (click)="getId(User.userId)">View</button>
-                </td>
+                <td>{{User.mobile}}</td>
+                <td>{{User.roleName}}</td>
+                
             </tr>
         </tbody>
     </table>

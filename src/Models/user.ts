@@ -1,8 +1,9 @@
 export class User {
     public userId?: number;
-    public userName?: string;
+    public name?: string;
     public email?: string;
     public password?: string;
-    public roleId?: string;
+    public mobile?: string;
+    public roleName?: string;
 
 }

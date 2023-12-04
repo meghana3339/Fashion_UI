@@ -19,11 +19,11 @@ export class AdduserComponent {
   }
   addUser() {
     this.http
-      .post('http://localhost:64257/api/Movie/AddMovie', this.user)
+      .post('http://localhost:5254/api/User/Register', this.user)
       .subscribe((response) => {
         console.log(response);
       });
-    this.router.navigateByUrl('getall'); 
+    this.router.navigateByUrl('adduser'); 
   }
 
 }

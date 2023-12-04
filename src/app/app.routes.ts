@@ -16,6 +16,8 @@ import { Availability } from '../Models/availability';
 import { AvailabilitybyidComponent } from '../Pages/availability/availabilitybyid/availabilitybyid.component';
 import { GetorderbyidComponent } from '../Pages/order/getorderbyid/getorderbyid.component';
 import { GetordersComponent } from '../Pages/order/getorders/getorders.component';
+import { LoginComponent } from '../Pages/login/login/login.component';
+import { AdminDashboardComponent } from '../Pages/admin-dashboard/admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
     {path:'adduser',component:AdduserComponent},
@@ -34,5 +36,7 @@ export const routes: Routes = [
     {path:'availabilitybyid',component:AvailabilitybyidComponent},
     {path:'getorderbyid',component:GetorderbyidComponent},
     {path:'getorders',component:GetordersComponent},
+    {path:'login',component:LoginComponent},
+    {path:'admindashboard',component:AdminDashboardComponent},
 
 ];

@@ -31,7 +31,7 @@ export class BrandbyidComponent {
   search() {
     this.http
       .get<Brand>(
-        'http://localhost:64257/api/Movie/GetMovieById/' + this.brandId
+        'http://localhost:5254/api/Brand/GetBrandById/' + this.brandId
       )
       .subscribe((response) => {
         console.log(response);
@@ -47,7 +47,7 @@ export class BrandbyidComponent {
   }
     update() {
     this.http
-      .put('http://localhost:64257/api/Movie/EditMovie', this.brand)
+      .put('http://localhost:5254/api/Brand/UpdateBrand', this.brand)
       .subscribe((response) => {
         console.log(response);
       });
@@ -56,7 +56,7 @@ export class BrandbyidComponent {
   delete() {
     this.brandId = this.brand.brandId;
     this.http
-      .delete('http://localhost:64257/api/Movie/DeleteMovie/' + this.brandId)
+      .delete('http://localhost:5254/api/Brand/DeleteBrand/' + this.brandId)
       .subscribe((response) => {
         console.log(response);
       });

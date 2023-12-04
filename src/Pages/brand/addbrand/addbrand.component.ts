@@ -19,11 +19,11 @@ export class AddbrandComponent {
   }
   addbrand() {
     this.http
-      .post('http://localhost:64257/api/Movie/AddMovie', this.brand)
+      .post('http://localhost:5254/api/Brand/AddBrands', this.brand)
       .subscribe((response) => {
         console.log(response);
       });
-    this.router.navigateByUrl('getall'); 
+    this.router.navigateByUrl('addbrand'); 
   }
 
 }

@@ -18,7 +18,7 @@ export class GetallbrandsComponent {
   }
   getAllbrands() {
     this.http
-      .get<Brand[]>('http://localhost:64257/api/Movie/GetAllMovies')
+      .get<Brand[]>('http://localhost:5254/api/Brand/GetAllBrands')
       .subscribe((response) => {
         this.brand = response;
         console.log(this.brand);
@@ -27,7 +27,7 @@ export class GetallbrandsComponent {
   delete(id: any) {
     console.log(id);
     this.http
-      .delete('http://localhost:64257/api/Movie/DeleteMovie/' + id)
+      .delete('http://localhost:5254/api/Brand/DeleteBrand/' + id)
       .subscribe((response) => {
         console.log(response);
       });
