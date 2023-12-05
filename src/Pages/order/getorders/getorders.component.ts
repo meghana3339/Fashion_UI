@@ -19,7 +19,7 @@ export class GetordersComponent {
   }
   getorders() {
     this.http
-      .get<Order[]>('http://localhost:64257/api/Movie/GetAllMovies')
+      .get<Order[]>('http://localhost:5254/api/Order/GetOrders')
       .subscribe((response) => {
         this.order = response;
         console.log(this.order);

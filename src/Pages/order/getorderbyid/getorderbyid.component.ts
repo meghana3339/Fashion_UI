@@ -46,6 +46,15 @@ export class GetorderbyidComponent {
       });
 
 }
+delete() {
+    this.orderId = this.order.orderId;
+    this.http
+      .delete('http://localhost:5254/api/Brand/DeleteBrand/' + this.orderId)
+      .subscribe((response) => {
+        console.log(response);
+      });
+    this.roter.navigateByUrl('getall');
+  }
 }
 
 

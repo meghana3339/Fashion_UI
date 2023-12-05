@@ -18,6 +18,7 @@ import { GetorderbyidComponent } from '../Pages/order/getorderbyid/getorderbyid.
 import { GetordersComponent } from '../Pages/order/getorders/getorders.component';
 import { LoginComponent } from '../Pages/login/login/login.component';
 import { AdminDashboardComponent } from '../Pages/admin-dashboard/admin-dashboard/admin-dashboard.component';
+import { CustomerDashboardComponent } from '../Pages/customer-dashboard/customerdashboard/customerdashboard.component';
 
 export const routes: Routes = [
     {path:'adduser',component:AdduserComponent},
@@ -38,5 +39,6 @@ export const routes: Routes = [
     {path:'getorders',component:GetordersComponent},
     {path:'login',component:LoginComponent},
     {path:'admindashboard',component:AdminDashboardComponent},
+    {path:'customerdashboard',component:CustomerDashboardComponent},
 
 ];
