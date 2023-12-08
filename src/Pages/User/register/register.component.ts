@@ -6,24 +6,24 @@ import { Router } from '@angular/router';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-adduser',
+  selector: 'app-register',
   standalone: true,
   imports: [CommonModule, FormsModule, HttpClientModule],
-  templateUrl: './adduser.component.html',
-  styleUrl: './adduser.component.css'
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.css'
 })
-export class AdduserComponent {
+export class registerComponent {
   user: User;
   constructor(private http: HttpClient, private router: Router) {
     this.user = new User();
   }
-  addUser() {
+  register() {
     this.http
       .post('http://localhost:5254/api/User/Register', this.user)
       .subscribe((response) => {
         console.log(response);
       });
-    this.router.navigateByUrl('adduser'); 
+    this.router.navigateByUrl('register'); 
   }
 
 }

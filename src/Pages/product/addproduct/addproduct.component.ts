@@ -23,7 +23,7 @@ export class AddproductComponent {
       .subscribe((response) => {
         console.log(response);
       });
-    this.router.navigateByUrl('get'); 
+    this.router.navigateByUrl('addproduct'); 
   }
 
 }

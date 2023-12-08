@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AvailabilitybyidComponent } from './availabilitybyid.component';
+import { AdduserComponent } from './register.component';
 
-describe('AvailabilitybyidComponent', () => {
-  let component: AvailabilitybyidComponent;
-  let fixture: ComponentFixture<AvailabilitybyidComponent>;
+describe('AdduserComponent', () => {
+  let component: AdduserComponent;
+  let fixture: ComponentFixture<AdduserComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AvailabilitybyidComponent]
+      imports: [AdduserComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AvailabilitybyidComponent);
+    fixture = TestBed.createComponent(AdduserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

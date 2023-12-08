@@ -30,12 +30,14 @@ export class LoginComponent {
         this.httpResponse = response;
         console.log(this.httpResponse);
         if (this.httpResponse.token != null) {
-          //store token in local storage
+        
           localStorage.setItem('token', this.httpResponse.token);
 
-          if (this.httpResponse.role == 'Customer') {
-            this.router.navigateByUrl('customer-dashboard');
-          } else if (this.httpResponse.role == 'Admin') {
+          if (this.httpResponse.roleName == 'user') {
+            console.log('Navigating to userdashboard');
+            this.router.navigateByUrl('userdashboard');
+          } else if (this.httpResponse.roleName == 'admin') {
+            console.log('Navigating to admin-dashboard');
             this.router.navigateByUrl('admin-dashboard');
           }
         } else {

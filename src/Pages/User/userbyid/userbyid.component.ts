@@ -31,7 +31,7 @@ export class UserbyidComponent {
   search() {
     this.http
       .get<User>(
-        'http://localhost:64257/api/Movie/GetMovieById/' + this.userId
+        'http://localhost:5254/api/User/GetUserById?userId=' + this.userId
       )
       .subscribe((response) => {
         console.log(response);
@@ -47,7 +47,7 @@ export class UserbyidComponent {
   }
   edit() {
     this.http
-      .put('http://localhost:64257/api/Movie/EditMovie', this.user)
+      .put('http://localhost:5254/api/User/EditUser', this.user)
       .subscribe((response) => {
         console.log(response);
       });
@@ -56,7 +56,7 @@ export class UserbyidComponent {
   delete() {
     this.userId = this.user.userId;
     this.http
-      .delete('http://localhost:64257/api/Movie/DeleteMovie/' + this.userId)
+      .delete('http://localhost:5254/api/User/DeleteUser/' + this.userId)
       .subscribe((response) => {
         console.log(response);
       });

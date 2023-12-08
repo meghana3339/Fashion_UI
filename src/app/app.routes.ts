@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AdduserComponent } from '../Pages/user/adduser/adduser.component';
+import { registerComponent } from '../Pages/user/register/register.component';
 import { GetallUsersComponent } from '../Pages/user/getallusers/getallusers.component';
 import { UserbyidComponent } from '../Pages/user/userbyid/userbyid.component';
 import { GetallsellersComponent } from '../Pages/seller/getallsellers/getallsellers.component';
@@ -11,17 +11,15 @@ import { ProductbyidComponent } from '../Pages/product/productbyid/productbyid.c
 import { AddbrandComponent } from '../Pages/brand/addbrand/addbrand.component';
 import { GetallbrandsComponent } from '../Pages/brand/getallbrands/getallbrands.component';
 import { BrandbyidComponent } from '../Pages/brand/brandbyid/brandbyid.component';
-import { GetallavailabilitiesComponent } from '../Pages/availability/getallavailabilities/getallavailabilities.component';
-import { Availability } from '../Models/availability';
-import { AvailabilitybyidComponent } from '../Pages/availability/availabilitybyid/availabilitybyid.component';
 import { GetorderbyidComponent } from '../Pages/order/getorderbyid/getorderbyid.component';
 import { GetordersComponent } from '../Pages/order/getorders/getorders.component';
 import { LoginComponent } from '../Pages/login/login/login.component';
 import { AdminDashboardComponent } from '../Pages/admin-dashboard/admin-dashboard/admin-dashboard.component';
-import { CustomerDashboardComponent } from '../Pages/customer-dashboard/customerdashboard/customerdashboard.component';
+import { ProductbypriceComponent } from '../Pages/product/productbyprice/productbyprice.component';
+import { userdashboardComponent } from '../Pages/userdashboard/userdashboard.component';
 
 export const routes: Routes = [
-    {path:'adduser',component:AdduserComponent},
+    {path:'register',component:registerComponent},
     {path:'getallusers',component:GetallUsersComponent},
     {path:'userbyid',component:UserbyidComponent},
     {path:'addseller',component:AddsellerComponent},
@@ -30,15 +28,38 @@ export const routes: Routes = [
     {path:'addproduct',component:AddproductComponent},
     {path:'getallproducts',component:GetallproductsComponent},
     {path:'productbyid',component:ProductbyidComponent},
+    {path:'productbyprice',component:ProductbypriceComponent},
     {path:'addbrand',component:AddbrandComponent},
     {path:'getallbrands',component:GetallbrandsComponent},
     {path:'brandbyid',component:BrandbyidComponent},
-    {path:'getallavailabilities',component:GetallavailabilitiesComponent},
-    {path:'availabilitybyid',component:AvailabilitybyidComponent},
     {path:'getorderbyid',component:GetorderbyidComponent},
     {path:'getorders',component:GetordersComponent},
     {path:'login',component:LoginComponent},
-    {path:'admindashboard',component:AdminDashboardComponent},
-    {path:'customerdashboard',component:CustomerDashboardComponent},
+    {path:'admin-dashboard',component:AdminDashboardComponent},
+    {path:'userdashboard',component:userdashboardComponent},
+    {
+        path: 'userdashboard',
+        component: userdashboardComponent,
+        children: [
+          {path:'getallproducts',component:GetallproductsComponent},
+          {path:'productbyid',component:ProductbyidComponent},
+          {path:'productbyprice',component:ProductbypriceComponent},
+          {path:'getorderbyid',component:GetorderbyidComponent},
+          {path:'login',component:LoginComponent},
+        ],
+      },
+      {
+        path: 'admin-dashboard',
+        component: AdminDashboardComponent,
+        children: [
+          {path:'getorders',component:GetordersComponent},
+          {path:'getallsellers',component:GetallsellersComponent},
+          {path:'sellerbyid',component:SellerbyidComponent},
+          {path:'getallusers',component:GetallUsersComponent},
+          {path:'login',component:LoginComponent},
+        ],
+      },
+    
 
 ];
+

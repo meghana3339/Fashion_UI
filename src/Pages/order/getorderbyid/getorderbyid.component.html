@@ -20,7 +20,7 @@
     <hr>
     <table class="table" *ngIf="isorderExist">
         <tr>
-            <td>availabilityId</td>
+            <td>orderId</td>
             <td>
                 <input type="number" [(ngModel)]="order.orderId" readonly class="form-control">
             </td>
@@ -55,7 +55,6 @@
                 <input type="text" [(ngModel)]="order.user" class="form-control">
             </td>
         </tr>
-
     </table>
 </div>
 

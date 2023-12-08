@@ -33,12 +33,16 @@
         <tr>
             <td>roleName</td>
             <td>
-                <input type="string" [(ngModel)]="user.roleName">
+                <select [(ngModel)]="user.roleName">
+                    <option>Seller</option>
+                    <option>Customer</option>
+                    
+                </select>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <button (click)="addUser()">Add</button>
+                <button (click)="register()">Add</button>
             </td>
         </tr>
 
